@@ -1,0 +1,198 @@
+/* цвет текста
+черный основной #212121
+белый #FFFFFF
+бледносерый добавочный #757575 
+акцентный голубой для текста и оформления #2196F3 
+цвета баннера и футера #2F303A
+для кнопок и секции светло серый #F5F4FA */
+
+:root {
+  --accent-color: #2196f3;
+  --main-color: #212121;
+  --second-color: #757575;
+  --clean-color: #ffffff;
+  --dark-background: #2f303a;
+  --light-background: #f5f4fa;
+}
+
+body {
+  background-color: var(--clean-color);
+  color: var(--main-color);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.web {
+  color: var(--accent-color);
+}
+
+.list {
+  list-style: none;
+}
+
+/* Header */
+.logo {
+  color: var(--main-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+.contacts .link,
+.contacts .link:visited {
+  color: var(--second-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link,
+.site-nav .link:visited {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* section banner */
+.tagline {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-color: var(--dark-background);
+  color: var(--clean-color);
+}
+
+.order {
+  color: var(--clean-color);
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/* section our advantages */
+.advantages .advantages-about {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages .desc {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* section our team */
+.ourteam {
+  background-color: var(--light-background);
+}
+
+.ourteam .heading-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.ourteam .desc {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* other */
+.heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.desc {
+  color: var(--second-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* section gallery */
+.gallery .heading-gallery {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.gallery .desc {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+
+/* buttons */
+.button {
+  color: var(--main-color);
+  background-color: var(--light-background);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--clean-color);
+  background-color: var(--accent-color);
+}
+
+/* footer */
+.footer {
+  background-color: var(--dark-background);
+}
+
+.footer .link {
+  color: var(--clean-color);
+}
+
+.address {
+  color: var(--clean-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address .link,
+.address .link:visited {
+  color: rgba(255, 255, 255, 0.6);
+}
