@@ -5,7 +5,23 @@
 акцентный голубой для текста и оформления #2196F3 
 цвета баннера и футера #2F303A
 для кнопок и секции светло серый #F5F4FA */
-
+/* нормалайз не дает нужного эффеккта по этому использую это html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding-inline-start: 0px;
+}
 :root {
   --accent-color: #2196f3;
   --main-color: #212121;
@@ -23,6 +39,22 @@ body {
   font-weight: normal;
 }
 
+/* ширина общего контента */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
 .web {
   color: var(--accent-color);
 }
@@ -74,11 +106,14 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--clean-color);
+  width: 696px;
 }
-
+.banner-center {
+  justify-content: center;
+}
 .banner {
   background-color: var(--dark-background);
-  color: var(--clean-color);
 }
 
 .order {
@@ -89,6 +124,10 @@ body {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
 /* section our advantages */
@@ -104,6 +143,9 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.flex-advantages {
+  width: 270px;
 }
 
 /* section our team */
@@ -125,7 +167,10 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
-
+.ourteam-back {
+  background: var(--clean-color);
+  width: 270px;
+}
 /* other */
 .heading {
   font-weight: bold;
@@ -149,14 +194,21 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding: 0px 24px;
 }
 
 .gallery .desc {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  padding: 0px 24px;
+  padding-bottom: 20px;
 }
 
+.gallery-back {
+  border: 1px solid #eeeeee;
+  width: 370px;
+}
 /* buttons */
 .button {
   color: var(--main-color);
@@ -166,12 +218,23 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+  margin: 0px 8px;
 }
 
 .button:hover,
 .button:focus {
   color: var(--clean-color);
   background-color: var(--accent-color);
+}
+
+.flex-button {
+  display: flex;
+  justify-content: center;
 }
 
 /* footer */
@@ -190,6 +253,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  width: 231px;
 }
 
 .address .link,
