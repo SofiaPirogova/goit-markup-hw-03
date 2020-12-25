@@ -61,9 +61,13 @@ body {
 
 .list {
   list-style: none;
+  margin: 0px;
 }
 
 /* Header */
+.header {
+  padding: 25px 0px;
+}
 .logo {
   color: var(--main-color);
   font-family: 'Raleway', sans-serif;
@@ -78,6 +82,20 @@ body {
   letter-spacing: 0.02em;
 }
 
+.space:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts {
+  display: flex;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  margin-left: 93px;
+  display: flex;
+}
 .site-nav .link,
 .site-nav .link:visited {
   color: var(--main-color);
@@ -108,11 +126,13 @@ body {
   text-transform: uppercase;
   color: var(--clean-color);
   width: 696px;
+  margin: 0 auto;
 }
 .banner-center {
-  justify-content: center;
+  text-align: center;
 }
 .banner {
+  padding: 200px 0px;
   background-color: var(--dark-background);
 }
 
@@ -128,8 +148,12 @@ body {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
+  margin-top: 30px;
 }
-
+/* most sections */
+.section-padding {
+  padding: 94px 15px;
+}
 /* section our advantages */
 .advantages .advantages-about {
   font-weight: bold;
@@ -137,17 +161,22 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
 }
 
 .advantages .desc {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin: 0px;
 }
 .flex-advantages {
   width: 270px;
 }
-
+/* section what we do */
+.section-whatwedo {
+  padding-bottom: 94px;
+}
 /* section our team */
 .ourteam {
   background-color: var(--light-background);
@@ -159,6 +188,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin: 30px 0px 10px 0px;
 }
 
 .ourteam .desc {
@@ -166,6 +196,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin: 0px 0px 30px 0px;
 }
 .ourteam-back {
   background: var(--clean-color);
@@ -178,6 +209,7 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin: 0px 0px 50px 0px;
 }
 
 .desc {
