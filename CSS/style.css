@@ -13,15 +13,16 @@
 *::after {
   box-sizing: inherit;
 } */
+
+/* About all document */
 html {
   box-sizing: border-box;
 }
-*,
-*::before,
-*::after {
+* {
   box-sizing: inherit;
   padding-inline-start: 0px;
 }
+
 :root {
   --accent-color: #2196f3;
   --main-color: #212121;
@@ -29,6 +30,9 @@ html {
   --clean-color: #ffffff;
   --dark-background: #2f303a;
   --light-background: #f5f4fa;
+  --border-header: #ececec;
+  --border-gallery: #eeeeee;
+  --footer-link: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -67,8 +71,13 @@ body {
 /* Header */
 .header {
   padding: 25px 0px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header);
 }
+
+.header-center {
+  align-items: center;
+}
+
 .logo {
   color: var(--main-color);
   font-family: 'Raleway', sans-serif;
@@ -87,17 +96,21 @@ body {
 .space:not(:last-child) {
   margin-right: 50px;
 }
+
 .contacts {
   display: flex;
 }
+
 .nav-flex {
   display: flex;
   align-items: center;
 }
+
 .site-nav {
   margin-left: 93px;
   display: flex;
 }
+
 .site-nav .link,
 .site-nav .link:visited {
   color: var(--main-color);
@@ -130,9 +143,11 @@ body {
   width: 696px;
   margin: 0 auto;
 }
+
 .banner-center {
   text-align: center;
 }
+
 .banner {
   padding: 200px 0px;
   background-color: var(--dark-background);
@@ -146,16 +161,17 @@ body {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
-
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
   margin-top: 30px;
 }
+
 /* most sections */
 .section-padding {
   padding: 94px 15px;
 }
+
 /* section our advantages */
 .advantages .advantages-about {
   font-weight: bold;
@@ -172,13 +188,16 @@ body {
   letter-spacing: 0.03em;
   margin: 0px;
 }
+
 .flex-advantages {
   width: 270px;
 }
+
 /* section what we do */
 .section-whatwedo {
   padding-bottom: 94px;
 }
+
 /* section our team */
 .ourteam {
   background-color: var(--light-background);
@@ -200,10 +219,12 @@ body {
   letter-spacing: 0.03em;
   margin: 0px 0px 30px 0px;
 }
+
 .ourteam-back {
   background: var(--clean-color);
   width: 270px;
 }
+
 /* other */
 .heading {
   font-weight: bold;
@@ -223,6 +244,10 @@ body {
 }
 
 /* section gallery */
+.gallery {
+  padding-bottom: 64px;
+}
+
 .gallery .heading-gallery {
   font-weight: bold;
   font-size: 18px;
@@ -242,12 +267,9 @@ body {
 }
 
 .gallery-back {
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--border-gallery);
   width: 370px;
   margin-bottom: 30px;
-}
-.gallery-back:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
 }
 
 /* buttons */
@@ -277,6 +299,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .space-button:not(:last-child) {
   margin-right: 8px;
 }
@@ -304,7 +327,7 @@ body {
 
 .address .link,
 .address .link:visited {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-link);
   display: inline-block;
   margin-top: 9px;
 }
