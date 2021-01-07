@@ -33,6 +33,7 @@ html {
   --border-header: #ececec;
   --border-gallery: #eeeeee;
   --footer-link: rgba(255, 255, 255, 0.6);
+  --drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 body {
@@ -223,6 +224,15 @@ body {
 .ourteam-back {
   background: var(--clean-color);
   width: 270px;
+  /* в макете стоит три тени - это немного странно - они действуют одновременно?зачем так? */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.ourteam-back:hover,
+.ourteam-back:focus {
+  filter: var(--drop-shadow);
 }
 
 /* other */
@@ -247,7 +257,9 @@ body {
 .gallery {
   padding-bottom: 64px;
 }
-
+.flex-gallery {
+  display: flex;
+}
 .gallery .heading-gallery {
   font-weight: bold;
   font-size: 18px;
@@ -267,11 +279,21 @@ body {
 }
 
 .gallery-back {
-  border: 1px solid var(--border-gallery);
   width: 370px;
   margin-bottom: 30px;
+  margin-right: 30px;
 }
-
+.gallery-back:nth-child(3n) {
+  margin-right: 0px;
+}
+.bordering {
+  border-bottom: 1px solid var(--border-gallery);
+  border-right: 1px solid var(--border-gallery);
+  border-left: 1px solid var(--border-gallery);
+}
+.img-gallery {
+  display: block;
+}
 /* buttons */
 .button {
   color: var(--main-color);
@@ -293,6 +315,7 @@ body {
 .button:focus {
   color: var(--clean-color);
   background-color: var(--accent-color);
+  filter: var(--drop-shadow);
 }
 
 .flex-button {
